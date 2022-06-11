@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'listView/doctor_list_view.dart';
-
+import 'package:subgrupo_vista_flutter/consultPage/doctor_consult_page.dart';
 
 
 void main() {
@@ -18,42 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  //Esto es un ejemplo del JSON que sera recibido de la Api
-  final dynamic context = {
-  "specialty": "Traumatologo",
-  "doctors": [
-    {
-      "name": "carlos",
-      "gender": "masculino",
-      "photo": "www.dsdsdsd.com/ds.jpg"
-    },
-    {
-      "name": "sofia",
-      "gender": "femenino",
-      "photo": "www.dsdsdsd.com/ds.jpg"
-    }
-  ]
-  };
-
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-          heightFactor: 10,
-          child: DoctorListView(this.context)
-              ),
+      home: const DoctorConsultPage('Flutter Demo Home Page'),
     );
   }
 }

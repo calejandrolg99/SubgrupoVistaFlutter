@@ -17,7 +17,7 @@ class DoctorListView extends Listview{
       itemBuilder: (BuildContext context, int index) {
         return Card(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: items[index],
           ),
         );
@@ -31,7 +31,7 @@ class DoctorListView extends Listview{
     List<dynamic> itemsView = items['doctors'];
 
     for (var item in itemsView) {
-      this.items.add(DoctorItemView(item['name'], item['gender'], item['photo']));
+      this.items.add(DoctorItemView(item['name'], item['gender'], item['photo'], item['specialty']));
     }
   }
 
