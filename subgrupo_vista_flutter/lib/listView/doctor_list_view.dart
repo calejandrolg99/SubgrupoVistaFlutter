@@ -8,7 +8,6 @@ import '../itemView/doctor_item_view.dart';
 class DoctorListView extends Listview{
   
   DoctorListView(Map<String, dynamic> contex, {Key? key}) : super(contex,key: key);
-
   
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,6 @@ class DoctorListView extends Listview{
         );
       },
     );
-
   }
 
   @override
@@ -35,5 +33,4 @@ class DoctorListView extends Listview{
     }
   }
 
-  
 }

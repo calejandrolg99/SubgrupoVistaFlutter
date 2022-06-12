@@ -11,7 +11,6 @@ class DoctorConsultPage extends ConsultPage {
     return DoctorConsultPageState();
   }
 
-
 }
 
 
