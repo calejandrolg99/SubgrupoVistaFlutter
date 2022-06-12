@@ -28,10 +28,10 @@ class DoctorItemView extends ItemView{
       
   String verifyGender(String gender){
     if (gender == 'f'){
-      return "Sra.";
+      return "Dra.";
     }
     else{
-      return "Sr.";
+      return "Dr.";
     }
 
   }
