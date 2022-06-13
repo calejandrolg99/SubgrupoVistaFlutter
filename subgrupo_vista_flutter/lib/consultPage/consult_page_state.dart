@@ -1,16 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import '../pageController/page_controller.dart';
 import 'consult_page.dart';
 
 abstract class ConsultPageState extends State<ConsultPage> {
+  late ConsultPageController controller;
+
+
   //Esto cambiara cuando haga la peticion a la Api
   dynamic contex = {
-    "specialities": [
-      "Todos",
-      "Traumatologia",
-      "Cardiologia",
-      "Pediatria",
-      "Ginecologia"
-    ],
     "doctors": [
       {
         "name": "Carlos Landaeta",
@@ -57,19 +54,16 @@ abstract class ConsultPageState extends State<ConsultPage> {
     ]
   };
 
-  void setContex() {
+  void setContex(String value) {
     setState(() {
-      // Esta llamada a setState le dice al framework Flutter que
-      // algo ha cambiado en este State, lo que hace que se vuelva a ejecutar
-      // el método build a continuación para que la pantalla pueda reflejar los
-      // valores actualizados. Si cambias _counter sin llamar
-      // setState(), entonces el método build no será llamado de nuevo,
-      // así que aparentará no haber ocurrido nada.
-
       //Aqui se le mandara el mensaje a PageController
+      //Actualizar los ListView
+      //controller.get(value); --->Aqui se le pasa el mensaje a page controller
     });
   }
 
   @override
   Widget build(BuildContext context);
+
+  void assignController();
 }
