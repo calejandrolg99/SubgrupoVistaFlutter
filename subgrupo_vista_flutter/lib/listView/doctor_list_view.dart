@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:subgrupo_vista_flutter/listView/list_view.dart';
+import 'package:subgrupo_vista_flutter/models/doctor_model.dart';
 import '../itemView/doctor_item_view.dart';
 
-
-
 // ignore: must_be_immutable
-class DoctorListView extends Listview{
-  
-  DoctorListView(Map<String, dynamic> contex, {Key? key}) : super(contex,key: key);
-  
+class DoctorListView extends Listview {
+  DoctorListView(List<dynamic>? contex, {Key? key})
+      : super(contex!, key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -25,12 +24,14 @@ class DoctorListView extends Listview{
   }
 
   @override
-  void createItems(Map<String, dynamic> items) {
-    List<dynamic> itemsView = items['doctors'];
+  void createItems(List<dynamic> itemsList) {
 
-    for (var item in itemsView) {
-      this.items.add(DoctorItemView(item['name'], item['gender'], item['photo'], item['specialty']));
+    for (var item in itemsList) {
+
+        this.items.add(
+            DoctorItemView(item.name, item.gender, item.photo, item.specialty));
     }
   }
-
 }
+
+

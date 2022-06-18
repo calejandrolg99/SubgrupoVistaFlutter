@@ -1,6 +1,5 @@
-
 abstract class ConsultPageController<E>{
   
-  Future<dynamic> get(E value);
+  Future<List<dynamic>> get(E value);
 
 }
