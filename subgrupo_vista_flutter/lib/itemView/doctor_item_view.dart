@@ -45,7 +45,7 @@ class DoctorItemView extends ItemView {
 String verifySpecialty(List specialty) {
   String specialities = '';
 
-  if (specialty.isEmpty) {
+  if (specialty.isNotEmpty) {
     if (specialty.length > 1) {
       for (var item in specialty) {
         if (item == specialty[0]) {
