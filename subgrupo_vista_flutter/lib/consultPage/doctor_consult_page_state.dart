@@ -4,7 +4,7 @@ import '../pageController/doctor_controller.dart';
 import 'consult_page_state.dart';
 
 class DoctorConsultPageState extends ConsultPageState {
-  var dropdownValue;
+  late String dropdownValue;
 
   List<String> assignDrowpDownItems() {
     List<String> assignDrowpDownItems = [
