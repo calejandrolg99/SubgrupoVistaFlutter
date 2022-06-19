@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'item_view.dart';
 
@@ -10,9 +8,7 @@ class DoctorItemView extends ItemView {
   final String photoRoute;
   final dynamic specialty;
 
-  const DoctorItemView(this.name, this.gender, this.photoRoute, this.specialty,
-      {Key? key})
-      : super(key: key);
+  const DoctorItemView(this.name, this.gender, this.photoRoute, this.specialty,{Key? key}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +24,9 @@ class DoctorItemView extends ItemView {
     );
   }
 
-  ImageProvider verifyPhoto(String photoRoute) {
+  ImageProvider verifyPhoto(String? photoRoute) {
     if (photoRoute == null) {
-      return NetworkImage(
+      return const NetworkImage(
           'https://globalmetropolitano.com/cms/wp-content/uploads/2017/03/user-icon.png');
     } else {
       return AssetImage(photoRoute);
@@ -49,7 +45,7 @@ class DoctorItemView extends ItemView {
 String verifySpecialty(List specialty) {
   String specialities = '';
 
-  if (specialty.length > 0) {
+  if (specialty.isEmpty) {
     if (specialty.length > 1) {
       for (var item in specialty) {
         if (item == specialty[0]) {
