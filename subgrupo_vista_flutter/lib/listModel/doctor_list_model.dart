@@ -8,7 +8,7 @@ class DoctorListModel implements ListModel {
   @override
   List<dynamic> createModels(String str) {
 
-    return List<DoctorsModel>.from(json.decode(str).map((x) => DoctorsModel.fromJson(x)));
+    return List<DoctorsModel>.from(json.decode(str).map((x) => DoctorsModel(x).createModel()));
 
   }
 

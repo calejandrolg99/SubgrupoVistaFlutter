@@ -9,10 +9,7 @@ abstract class ConsultPageState extends State<ConsultPage> {
 
   void setContex(value) {
     setState(() {
-      //Aqui se le mandara el mensaje a PageController
-      //Actualizar los ListView
       contex = controller.get(value);
-      //controller.get(value); --->Aqui se le pasa el mensaje a page controller
     });
   }
 

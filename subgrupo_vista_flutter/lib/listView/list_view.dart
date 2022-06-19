@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../itemView/item_view.dart';
 
 
+// ignore: must_be_immutable
 abstract class Listview extends StatelessWidget {
 
   @protected
@@ -12,7 +13,7 @@ abstract class Listview extends StatelessWidget {
     createItems(contex);
   }
 
-  void createItems(List<dynamic> items);
+  void createItems(List<dynamic> itemsList);
 
   @override
   Widget build(BuildContext context);

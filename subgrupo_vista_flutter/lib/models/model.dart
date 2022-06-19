@@ -1,5 +1,8 @@
 abstract class Model {
 
-  //factory Model() = DoctorsModel;
-    
+  Model() {
+    createModel();
+  }
+
+  createModel();
 }

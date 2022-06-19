@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:subgrupo_vista_flutter/models/doctor_model.dart';
 import '../listView/doctor_list_view.dart';
 import '../pageController/doctor_controller.dart';
 import 'consult_page_state.dart';
@@ -68,7 +67,7 @@ class DoctorConsultPageState extends ConsultPageState {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               CircularProgressIndicator(),
             ],
           );
@@ -81,7 +80,7 @@ class DoctorConsultPageState extends ConsultPageState {
             return const Text('Empty data');
           }
         } else {
-          return Center(child: Text('Seleccione un Filtro', style: TextStyle(fontSize: 25),));
+          return const Center(child: Text('Seleccione un Filtro', style: TextStyle(fontSize: 25),));
         }
       },
     );
