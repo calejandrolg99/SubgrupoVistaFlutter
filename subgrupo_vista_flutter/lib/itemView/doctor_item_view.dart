@@ -29,7 +29,7 @@ class DoctorItemView extends ItemView {
       return const NetworkImage(
           'https://globalmetropolitano.com/cms/wp-content/uploads/2017/03/user-icon.png');
     } else {
-      return AssetImage(photoRoute);
+      return NetworkImage(photoRoute);
     }
   }
 
