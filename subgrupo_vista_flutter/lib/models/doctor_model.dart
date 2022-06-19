@@ -1,9 +1,3 @@
-// To parse this JSON data, do
-//
-//     final doctorsResponse = doctorsResponseFromJson(jsonString);
-
-import 'dart:convert';
-
 import 'package:subgrupo_vista_flutter/models/model.dart';
 
 //List<DoctorsModel> doctorsModelFromJson(String str) => List<DoctorsModel>.from(
