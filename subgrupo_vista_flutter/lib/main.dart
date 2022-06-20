@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:subgrupo_vista_flutter/consultPage/doctor_consult_page.dart';
 
@@ -6,6 +8,9 @@ import 'package:subgrupo_vista_flutter/consultPage/doctor_consult_page.dart';
 
 
 void main() {
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+  HttpOverrides.global=new MyHttpoverrides();
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////
   runApp(const MyApp());
 }
 
@@ -24,3 +29,13 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+class MyHttpoverrides extends HttpOverrides{
+  @override 
+  HttpClient createHttpClient(SecurityContext? context){
+    return super.createHttpClient(context)
+    ..badCertificateCallback = (X509Certificate cert, String host, int port)=>true;
+  }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
