@@ -25,9 +25,8 @@ class DoctorListView extends Listview {
   void createItems(List<dynamic> itemsList) {
 
     for (var item in itemsList) {
-
       items.add(
-        DoctorItemView(item.name, item.gender, item.photo, item.specialty));
+        DoctorItemView(item['name'], item['gender'], item['photo'], item['specialty']));
     }
   }
 }

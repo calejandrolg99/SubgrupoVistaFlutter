@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../listView/doctor_list_view.dart';
-import '../pageController/doctor_controller.dart';
+import '../pageController/doctor_controller_adapter.dart';
 import 'consult_page_state.dart';
 
 class DoctorConsultPageState extends ConsultPageState {
@@ -50,7 +50,7 @@ class DoctorConsultPageState extends ConsultPageState {
 
   @override
   void assignController() {
-    controller = DoctorConsultController();
+    controller = DoctorControllerAdapter();
   }
 
 //////////////// Widgets individuales
