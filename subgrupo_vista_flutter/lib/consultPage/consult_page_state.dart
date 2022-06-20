@@ -7,14 +7,11 @@ abstract class ConsultPageState extends State<ConsultPage> {
 
   dynamic contex;
 
-  void setContex(value) {
-    setState(() {
-      contex = controller.get(value);
-    });
+   setContex(value) {
+    //contex = controller.get(value);
+    return controller.get(value);
   }
 
   @override
   Widget build(BuildContext context);
-
-  void assignController();
 }

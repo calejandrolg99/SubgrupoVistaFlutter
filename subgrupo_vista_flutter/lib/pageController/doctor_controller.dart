@@ -8,11 +8,11 @@ class DoctorConsultController implements ConsultPageController<String>{
   Future<dynamic> get(String value) async {
     if (value != 'Todos' && value != ' ') {
       final response =
-          await http.get(Uri.parse('http://10.0.2.2:3000/search/spe/$value'));
+          await http.get(Uri.parse('http://10.0.1.12:3005/search/spe/$value'));
       return response.body;
     } else {
       final response =
-          await http.get(Uri.parse('http://10.0.2.2:3000/search/spe'));
+          await http.get(Uri.parse('http://10.0.1.12:3005/search/spe'));
       return response.body;
 
     }
